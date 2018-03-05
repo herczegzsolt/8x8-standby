@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "8x8 standby",
+	"version": "0.1",
+	"description": "Manage your status in 8x8 VCC",
+	"background": {
+			"scripts": ["background-script.js"]
+	},
+	"content_scripts": [ 
+			{
+				"matches": ["https://*.8x8.com/AGUI/control.php"],
+				"include_globs": ["https://vcc-*.8x8.com/AGUI/control.php"],
+				"all_frames":true,
+				"js": ["content-script.js"]
+			}
+	],
+	"web_accessible_resources": [
+			"inpage-script.js"
+	],
+	"permissions": [
+			"https://*.8x8.com/",
+			"idle"
+	]
+}
