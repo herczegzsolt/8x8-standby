@@ -1,10 +1,15 @@
 {
 	"manifest_version": 2,
 	"name": "8x8 standby",
-	"version": "0.1",
+	"version": "0.2",
 	"description": "Manage your status in 8x8 VCC",
 	"background": {
 			"scripts": ["background-script.js"]
+	},
+	"icons": {
+		"16": "icon/default-16.png",
+		"48": "icon/default-48.png",
+		"128": "icon/default-128.png"
 	},
 	"content_scripts": [ 
 			{
