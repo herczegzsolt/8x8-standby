@@ -1,18 +1,14 @@
 'use strict';
-function doBreak(){
-	window.postMessage("do-8x8-break","*");
-}
-function doAvailable(){
-	window.postMessage("do-8x8-available","*");
-}
 function changeStatus(message,sender){
 	console.log("Event received ",message,sender);
 	if(message.action == "status"){
-		if(message.status == "locked"){
-			doBreak();	
-		}
-		if(message.status == "active"){
-			doAvailable();
+		if(document.getElementById("status-description-work-offline").style.display == "none"){
+			if(message.status == "locked"){
+				window.postMessage("do-8x8-break","*");
+			}
+			if(message.status == "active"){
+				window.postMessage("do-8x8-available","*");
+			}
 		}
 	}
 }
