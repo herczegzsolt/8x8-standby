@@ -18,3 +18,9 @@ How-to use it
 3. Keep the VCC tab open in the background
 
 Your status will be changed upon lock/unlock on all open 8x8 VCC pages
+
+Download
+--------
+
+The addon is available in the Chrome Web Store:
+https://chrome.google.com/webstore/detail/8x8-standby/ebhmegmlcodoijhpflinclkghjknljnf
