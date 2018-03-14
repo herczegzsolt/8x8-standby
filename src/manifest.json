@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "8x8 standby",
-	"version": "0.2",
+	"version": "0.3",
 	"description": "Manage your status in 8x8 VCC",
 	"background": {
 			"scripts": ["background-script.js"]
@@ -13,8 +13,14 @@
 	},
 	"content_scripts": [ 
 			{
-				"matches": ["https://*.8x8.com/AGUI/control.php"],
-				"include_globs": ["https://vcc-*.8x8.com/AGUI/control.php"],
+				"matches": [
+					"https://*.8x8.com/AGUI/control.php",
+					"https://*.mycontactual.com/AGUI/control.php"
+					],
+				"include_globs": [
+					"https://vcc-*.8x8.com/AGUI/control.php",
+					"https://*.mycontactual.com/AGUI/control.php"
+					],
 				"all_frames":true,
 				"js": ["content-script.js"]
 			}
@@ -24,6 +30,7 @@
 	],
 	"permissions": [
 			"https://*.8x8.com/",
+			"https://*.mycontactual.com/",
 			"idle"
 	]
 }
